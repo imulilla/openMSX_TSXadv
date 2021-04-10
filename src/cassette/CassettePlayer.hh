@@ -33,6 +33,8 @@ public:
 	void setMotor(bool status, EmuTime::param time) override;
 	int16_t readSample(EmuTime::param time) override;
 	void setSignal(bool output, EmuTime::param time) override;
+	static std::string ListSections();
+	static void AddSection(unsigned pos, std::string name,std::string tipo);
 
 	// Pluggable
 	std::string_view getName() const override;
@@ -60,8 +62,8 @@ private:
 
 	/** Insert a tape for use in PLAY mode.
 	 */
-	void playTape(const Filename& filename, EmuTime::param time);
-	void insertTape(const Filename& filename, EmuTime::param time);
+	void playTape(const Filename& filename, EmuTime::param time, size_t posicioncinta);
+	void insertTape(const Filename& filename, EmuTime::param time, size_t posicioncinta);
 
 	/** Removes tape (possibly stops recording). And go to STOP mode.
 	 */

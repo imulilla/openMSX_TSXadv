@@ -14,3 +14,7 @@ core
 *.VC.VC.opendb
 .vscode/
 __pycache__/
+/.vs
+/build/3rdparty/glew.vcxproj.user
+/build/msvc/.vs/openmsx/v16
+/build/msvc/openmsx.vcxproj.user

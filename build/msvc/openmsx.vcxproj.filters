@@ -1387,6 +1387,9 @@
     <ClCompile Include="$(OpenMSXSrcDir)\fdc\SVIFDC.cc" />
     <ClCompile Include="$(OpenMSXSrcDir)\input\ColecoJoystickIO.cc" />
     <ClCompile Include="$(OpenMSXSrcDir)\SpeedManager.cc" />
+    <ClCompile Include="..\..\src\cassette\TsxImage.cc">
+      <Filter>cassette</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(OpenMSXSrcDir)\cassette\CasImage.hh">
@@ -2941,6 +2944,7 @@
     <None Include="$(OpenMSXSrcDir)\video\SuperImposedFrame.hh" />
     <None Include="$(OpenMSXSrcDir)\video\SuperImposedFrame.hh" />
     <None Include="$(OpenMSXSrcDir)\SpeedManager.hh" />
+    <None Include="$(OpenMSXSrcDir)\video\SuperImposedFrame.hh" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(OpenMSXSrcDir)\resource\openmsx.rc">
@@ -2950,6 +2954,9 @@
   <ItemGroup>
     <ClInclude Include="$(OpenMSXSrcDir)\sound\fake_windows.h">
       <Filter>sound</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cassette\TsxImage.hh">
+      <Filter>cassette</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
