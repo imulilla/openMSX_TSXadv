@@ -6,9 +6,9 @@
 
 namespace openmsx {
 
-class CommandController;
-class XMLElement;
 class Autofire;
+class MSXMotherBoard;
+class XMLElement;
 
 /**
  * Ren-Sha Turbo is the autofire in several MSX 2+ models and in
@@ -20,7 +20,7 @@ class Autofire;
 class RenShaTurbo
 {
 public:
-	RenShaTurbo(CommandController& commandController,
+	RenShaTurbo(MSXMotherBoard& motherBoard,
 	            const XMLElement& machineConfig);
 	~RenShaTurbo();
 
@@ -29,6 +29,9 @@ public:
 	  *         and false. When auto-fire if off result is false.
 	  */
 	[[nodiscard]] bool getSignal(EmuTime::param time);
+
+	template<typename Archive>
+	void serialize(Archive& ar, unsigned version);
 
 private:
 	// The Autofire circuit

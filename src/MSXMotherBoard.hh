@@ -100,7 +100,7 @@ public:
 
 	[[nodiscard]] const HardwareConfig* getMachineConfig() const { return machineConfig; }
 	void setMachineConfig(HardwareConfig* machineConfig);
-	[[nodiscard]] std::string getMachineType() const;
+	[[nodiscard]] std::string_view getMachineType() const;
 	[[nodiscard]] bool isTurboR() const;
 
 	std::string loadMachine(const std::string& machine);
@@ -274,7 +274,7 @@ private:
 	bool active;
 	bool fastForwarding;
 };
-SERIALIZE_CLASS_VERSION(MSXMotherBoard, 4);
+SERIALIZE_CLASS_VERSION(MSXMotherBoard, 5);
 
 class ExtCmd final : public RecordedCommand
 {
